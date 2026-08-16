@@ -26,7 +26,7 @@ Every question has both versions, then a recommendation:
 2. **Layman** — the same decision and an example, both in plain language, no jargon.
 3. **Recommended** — your answer and why, in one or two sentences.
 
-Number questions 1–10 inside the wave.
+Number questions 1–5 inside the wave.
 
 ## Facts vs decisions
 
