@@ -93,8 +93,8 @@ Arguments follow each skill's `argument-hint`. Some skills (e.g. `orchestrate-sl
 | `orchestrate-slices` | [orchestrate-slices/](orchestrate-slices/) | Coordinate all vertical slices under a GitHub parent issue with a hard two-worktree ceiling, supervising workers and serializing merges. |
 | `paseo-orchestrate-slice` | [paseo-orchestrate-slice/](paseo-orchestrate-slice/) | Same coordination with Paseo: dispatch vertical slices into Paseo worktree workspaces under a hard two-worktree ceiling, supervise workers, serialize merges. |
 | `paseo-ship-slice` | [paseo-ship-slice/](paseo-ship-slice/) | Ship one vertical slice from ticket to merge-ready PR inside a Paseo worktree workspace. |
-| `ship-slice` | [for-orca-orchestration/ship-slice/](for-orca-orchestration/ship-slice/) | Ship one vertical slice from ticket to merged `main` — orient, build, verify, review loop, ship. |
-| `slice-relay` | [for-orca-orchestration/slice-relay/](for-orca-orchestration/slice-relay/) | Relay a parent GitHub tracker through its vertical slices, passing the baton to sibling worktrees. |
+| `ship-slice` | [ship-slice/](ship-slice/) | Ship one vertical slice from ticket to merge-ready PR — implement, verify, review loop, push; orchestrated or standalone mode. |
+| `slice-relay` | [slice-relay/](slice-relay/) | Relay a parent GitHub tracker through its vertical slices, passing the baton to sibling worktrees. |
 | `faultline` | [faultline/](faultline/) | Stress-test a plan, design, or specification by identifying material gaps that could change implementation or scope. |
 | `faultline-with-docs` | [faultline-with-docs/](faultline-with-docs/) | Faultline combined with domain modeling — gap discovery plus `CONTEXT.md` and ADR recording. |
 | `model-relay` | [model-relay/](model-relay/) | Resume active work after switching models or providers by reconstructing state from artifacts. |
