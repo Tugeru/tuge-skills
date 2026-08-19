@@ -103,7 +103,7 @@ Worker identities are deterministic:
 
 ```text
 workspace title: slice-<issue>
-branch:          slice/<issue>-<slug>
+branch:          <type>/<issue>-<slug>
 worktree slug:   slice-<issue>
 agent title:     slice-<issue>
 agent label:     slice=<issue>
@@ -185,7 +185,7 @@ Prompt the worker:
 ```text
 You are the implementation worker for GitHub slice #<issue> under parent #<parent>.
 
-You own ONLY #<issue>. The orchestrator already created and bootstrapped this Paseo worktree workspace (title "slice-<issue>", branch slice/<issue>-<slug>).
+You own ONLY #<issue>. The orchestrator already created and bootstrapped this Paseo worktree workspace (title "slice-<issue>", branch <type>/<issue>-<slug>).
 
 Invoke:
 

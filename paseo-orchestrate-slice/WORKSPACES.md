@@ -23,11 +23,13 @@ Branch from the fetched `origin/$BASE`, never a stale local checkout.
 
 ## 2. Create the workspace
 
+Branch name: `<type>/<issue>-<slug>`. Default `feat/`; use `fix/` for bug tickets, `docs/` for documentation-only tickets, `chore/` for maintenance, `hotfix/` for urgent fixes.
+
 ```bash
 paseo workspace create \
   --isolation worktree \
   --mode branch-off \
-  --new-branch "slice/<issue>-<slug>" \
+  --new-branch "<type>/<issue>-<slug>" \
   --base "origin/$BASE" \
   --title "slice-<issue>" \
   --worktree-slug "slice-<issue>" \

@@ -20,7 +20,7 @@ Run each step in order; do not proceed until the current step's `Done when` hold
 /paseo-ship-slice <issue> orchestrated
 ```
 
-The orchestrator already selected this slice, created and bootstrapped its Paseo worktree workspace (title `slice-<issue>`, branch `slice/<issue>-<slug>`) and launched this worker inside it.
+The orchestrator already selected this slice, created and bootstrapped its Paseo worktree workspace (title `slice-<issue>`, branch `<type>/<issue>-<slug>`) and launched this worker inside it.
 
 This worker owns only this slice: no new workspace, no new branch, no sibling slices, no `/slice-relay`, no launching agents, no touching the parent tracker, no merging the PR.
 
@@ -144,8 +144,10 @@ Never create a replacement workspace or run another bootstrap yourself.
 
 ### Standalone mode
 
+Branch name: `<type>/<N>-<slug>`. Default `feat/`; use `fix/` for bug tickets, `docs/` for documentation-only tickets, `chore/` for maintenance, `hotfix/` for urgent fixes.
+
 ```bash
-git checkout -b "ticket-<N>-<slug>" "origin/$BASE"
+git checkout -b "<type>/<N>-<slug>" "origin/$BASE"
 ```
 
 Ensure a runnable checkout: `pnpm install --frozen-lockfile` when dependencies are missing.
