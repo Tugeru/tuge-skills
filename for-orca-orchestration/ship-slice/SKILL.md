@@ -53,7 +53,7 @@ Done when: the last round is clean on both axes, all required verification has p
 - Commit the logical groups from step 3 with conventional messages (`/git-commit`).
 - Before pushing: `git fetch origin`; if the branch is behind `origin/main` (`git rev-list --count HEAD..origin/main` > 0), rebase onto it: `git rebase origin/main`, resolve conflicts as they arise, then re-run step 5's verification. Push only when the branch contains the current `origin/main`.
 - Push; open the PR with `Closes #<N>` and a body recording the review loop, deferred findings, and verification evidence.
-- Poll `gh pr checks` until green; resolve every review comment, bot and human, before merging.
+- Poll `gh pr checks` until green. Green CI is not the review verdict — a green Greptile check only means scanning finished. Read the PR body (`gh pr view <PR> --json body`) and require it to show the Greptile review is 5/5 and state clear to merge; verify every review comment thread (bot and human) is resolved before merging.
 - Merge to `main`; leave the parent issue untouched. If this session is a slice-relay, return to it. Otherwise name the parent's remaining open unblocked children and stop.
 
 Done when: the slice is on `main`, the ticket is closed as completed, and no PR comments remain open.
