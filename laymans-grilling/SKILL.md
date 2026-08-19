@@ -14,7 +14,7 @@ Ask questions in **waves of 5**. One wave per turn. Wait for answers to the curr
 1. **Blockers** — immediate clarifications that would stall or misdirect implementation
 2. **Spec gaps** — ambiguities that would leave the spec weak or underspecified
 
-If blockers or spec gaps remain and budget remains, fire another wave. If none remain, stop and ask me to confirm shared understanding. After wave 4, list leftover gaps and wait for me to confirm we proceed with them open. A wave may be shorter than 10 when fewer gaps are left — never pad with filler.
+If blockers or spec gaps remain and budget remains, fire another wave. If none remain, stop and ask me to confirm shared understanding. After wave 4, list leftover gaps and wait for me to confirm we proceed with them open. A wave may be shorter than 5 when fewer gaps are left — never pad with filler.
 
 Carry unresolved branches into later waves; do not re-ask a settled decision.
 
