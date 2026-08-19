@@ -25,7 +25,7 @@ Each top-level directory in this repository is an installable OMP skill. A skill
 
 Skills here handle three concerns:
 
-- **Orchestration** — dispatching vertical slices under a GitHub parent issue, supervising workers through Herdr worktrees, and serializing merges.
+- **Orchestration** — dispatching vertical slices under a GitHub parent issue, supervising workers through Herdr or Paseo worktrees, and serializing merges.
 - **Planning & review** — stress-testing plans and specifications before implementation.
 - **Handoff** — passing active work between models, providers, or agent sessions without losing state.
 
@@ -37,6 +37,7 @@ Skills execute against the following tooling chain:
 
 - [Oh My Pi](https://github.com/oh-my-pi) — the agentic coding harness that loads and invokes skills
 - [Herdr](https://github.com/herdr) — worktree lifecycle and agent management
+- [Paseo](https://github.com/getpaseo/paseo) — daemon and CLI for launching and supervising coding agents in worktree workspaces
 - [Orca CLI](https://github.com/orca) — terminal, worktree, and browser control
 - [GitHub CLI](https://cli.github.com/) — issue, PR, and GraphQL operations
 
@@ -90,6 +91,8 @@ Arguments follow each skill's `argument-hint`. Some skills (e.g. `orchestrate-sl
 | Skill | Directory | Purpose |
 | --- | --- | --- |
 | `orchestrate-slices` | [orchestrate-slices/](orchestrate-slices/) | Coordinate all vertical slices under a GitHub parent issue with a hard two-worktree ceiling, supervising workers and serializing merges. |
+| `paseo-orchestrate-slice` | [paseo-orchestrate-slice/](paseo-orchestrate-slice/) | Same coordination with Paseo: dispatch vertical slices into Paseo worktree workspaces under a hard two-worktree ceiling, supervise workers, serialize merges. |
+| `paseo-ship-slice` | [paseo-ship-slice/](paseo-ship-slice/) | Ship one vertical slice from ticket to merge-ready PR inside a Paseo worktree workspace. |
 | `ship-slice` | [for-orca-orchestration/ship-slice/](for-orca-orchestration/ship-slice/) | Ship one vertical slice from ticket to merged `main` — orient, build, verify, review loop, ship. |
 | `slice-relay` | [for-orca-orchestration/slice-relay/](for-orca-orchestration/slice-relay/) | Relay a parent GitHub tracker through its vertical slices, passing the baton to sibling worktrees. |
 | `faultline` | [faultline/](faultline/) | Stress-test a plan, design, or specification by identifying material gaps that could change implementation or scope. |
